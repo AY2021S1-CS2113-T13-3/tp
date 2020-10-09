@@ -11,16 +11,12 @@ public class Event extends Task {
         //setTaskType("E");
     }
 
-    /**
-     * Returns the event detail of the task.
-     * @return the event detail of the task.
-     */
     /*public String getAt() {
         //return at;
     }*/
 
     @Override
     public String toString() {
-        return super.toString();
+        return description + " " + location + " "  + " " + timeStart + "-" + timeEnd;
     }
 }

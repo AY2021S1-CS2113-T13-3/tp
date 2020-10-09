@@ -3,6 +3,7 @@ package seedu.duke.command;
 //import seedu.duke.storage.Storage;
 import seedu.duke.task.TaskList;
 import seedu.duke.ui.Ui;
+import seedu.duke.user.User;
 import seedu.duke.user.UserList;
 
 /**
@@ -15,7 +16,7 @@ public class ByeCommand extends Command {
     }
 
     //@Override
-    public void execute(UserList users, Ui ui/*, Storage storage*/) {
+    public void execute(UserList users, Ui ui, User nowUser/*, Storage storage*/) {
         isExit = true;
         ui.showBye();
     }

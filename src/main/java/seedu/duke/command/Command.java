@@ -10,7 +10,8 @@ import seedu.duke.user.UserList;
 public abstract class Command {
     protected String input;
     protected boolean isExit = false;
-    protected User currentUser;
+    protected User currentUser = null;
+    protected boolean isLogIn = false;
 
     /**
      * Creates a new command.
@@ -28,7 +29,7 @@ public abstract class Command {
      * @param ui the corresponding messages based on the task.
      * @throws DukeException if execution encounters error.
      */
-    public abstract void execute(UserList users, Ui ui/*, Storage storage*/) throws DukeException;
+    public abstract void execute(UserList users, Ui ui, User nowUser/*, Storage storage*/) throws DukeException;
 
     public boolean isExit() {
         return isExit;
@@ -36,5 +37,9 @@ public abstract class Command {
 
     public User getCurrentUser() {
         return currentUser;
+    }
+
+    public boolean isLogIn() {
+        return isLogIn;
     }
 }

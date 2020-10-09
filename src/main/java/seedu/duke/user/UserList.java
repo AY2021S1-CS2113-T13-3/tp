@@ -30,7 +30,7 @@ public class UserList {
         try {
             return users.get(index - 1);
         } catch (IndexOutOfBoundsException e) {
-            throw new DukeException("Invalid task number! Type 'list' to get an overview of your tasks.");
+            throw new DukeException("Invalid user number!");
         }
     }
 

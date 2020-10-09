@@ -1,6 +1,8 @@
 package seedu.duke;
 
+import seedu.duke.command.AddCommand;
 import seedu.duke.command.Command;
+import seedu.duke.command.LogInCommand;
 import seedu.duke.exception.DukeException;
 import seedu.duke.parser.Parser;
 import seedu.duke.task.TaskList;
@@ -32,14 +34,18 @@ public class Duke {
     public void run() {
         ui.showWelcome();
         boolean isExit = false;
-        User currentUser = null;
+        User nowUser = null;
         while (!isExit) {
             try {
                 String fullCommand = ui.readCommand();
                 ui.showLine(); // show the divider line ("_______")
                 Command c = Parser.parse(fullCommand);
-                c.execute(users, ui/*, storage*/);
-                currentUser = c.getCurrentUser();
+                c.execute(users, ui, nowUser/*, storage*/);
+
+                if (c.isLogIn() == true) {
+                    nowUser = c.getCurrentUser();
+                }
+                //System.out.println(nowUser.getName());
                 isExit = c.isExit();
             } catch (DukeException e) {
                 ui.showError(e.getMessage());

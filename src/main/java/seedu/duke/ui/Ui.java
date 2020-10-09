@@ -1,7 +1,7 @@
 package seedu.duke.ui;
 
 //import seedu.duke.task.Deadline;
-//import seedu.duke.task.Event;
+import seedu.duke.task.Event;
 import seedu.duke.task.Task;
 import seedu.duke.task.TaskList;
 import seedu.duke.user.User;
@@ -81,14 +81,15 @@ public class Ui {
     /**
      * Prints out the event task given by the user.
      *
-     * @param task the task to be added to the array list.
+     * @param event the task to be added to the array list.
      */
-    /*public void printEvent(TaskList taskList, Event task) {
-        System.out.println("Got it! I've added the following event in the list:\n" + task);
-        System.out.println("Now now have " + taskList.getTotalTaskCount() + " tasks in the list.");
-    }*/
+    public void printEvent(Event event, String date) {
+        System.out.println("Got it! I've added the following event in " + date + "\n" + event);
+        //System.out.println("Now now have " + taskList.getTotalTaskCount() + " tasks in the list.");
+    }
 
     public void printDone(Task task) {
+
         System.out.println("Nice! I have marked this task as done:\n" + task);
     }
 

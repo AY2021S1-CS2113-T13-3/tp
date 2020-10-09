@@ -1,6 +1,9 @@
 package seedu.duke.timetable;
 
+import seedu.duke.task.Event;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Timetable {
     protected ArrayList<Object> monTimetable;
@@ -20,4 +23,34 @@ public class Timetable {
         this.satTimetable = new ArrayList<>();
         this.sunTimetable = new ArrayList<>();
     }
+
+    public ArrayList<Object> getMonTimetable() {
+        return monTimetable;
+    }
+
+    public ArrayList<Object> getTueTimetable() {
+        return tueTimetable;
+    }
+
+    public ArrayList<Object> getWedTimetable() {
+        return wedTimetable;
+    }
+
+    public ArrayList<Object> getThuTimetable() {
+        return thuTimetable;
+    }
+
+    public ArrayList<Object> getFriTimetable() {
+        return friTimetable;
+    }
+
+    public ArrayList<Object> getSatTimetable() {
+        return satTimetable;
+    }
+
+    public ArrayList<Object> getSunTimetable() {
+        return sunTimetable;
+    }
+
+
 }

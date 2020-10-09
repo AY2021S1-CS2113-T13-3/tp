@@ -18,12 +18,15 @@ public class LogInCommand extends Command {
     }
 
     @Override
-    public void execute(UserList users, Ui ui/*, Storage storage*/) throws DukeException {
+    public void execute(UserList users, Ui ui, User nowUser/*, Storage storage*/) throws DukeException {
         String[] parsedInputs = input.split(" /", 2);
         User newUser = new User(parsedInputs[0], parsedInputs[1]);
         currentUser = newUser;
         users.addUser(newUser);
         ui.greetUser(newUser);
+        isLogIn = true;
+
+
         //storage.write(tasks);
     }
 }
