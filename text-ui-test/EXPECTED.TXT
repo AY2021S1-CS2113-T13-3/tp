@@ -118,14 +118,15 @@ Your common timeslots are:
 6HR 
 7HR 
 11HR 
-16HR 
-17HR 
-18HR 
-19HR 
-20HR 
-21HR 
-22HR 
-23HR 
+15HR
+16HR
+17HR
+18HR
+19HR
+20HR
+21HR
+22HR
+23HR
 ____________________________________________________________
 ____________________________________________________________
 Here are the classes in your timetable for mon:
@@ -148,14 +149,15 @@ Your common timeslots are:
 7HR 
 8HR 
 9HR 
-16HR 
-17HR 
-18HR 
-19HR 
-20HR 
-21HR 
-22HR 
-23HR 
+15HR
+16HR
+17HR
+18HR
+19HR
+20HR
+21HR
+22HR
+23HR
 ____________________________________________________________
 ____________________________________________________________
 Hello Alex!
