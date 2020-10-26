@@ -76,7 +76,7 @@ public class CompareCommand extends Command {
                 int tempX = (Integer.parseInt(event.getTimeStart().substring(0, 2)));
                 int tempY = (Integer.parseInt(event.getTimeEnd().substring(0, 2)));
 
-                for (int i = tempX; i < tempY + 1; i++) {
+                for (int i = tempX; i < tempY; i++) {
                     outputArray.remove(Integer.valueOf(i));
                 }
             }
