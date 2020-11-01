@@ -167,11 +167,11 @@ public class Parser {
         if (input.length < 2) {
             throw new DukeException("There is no description in your login command!");
         } else if (!input[1].contains("/")) {
-            throw new DukeException("An login requires an '/' to indicate password!");
+            throw new DukeException("An login requires an ' /' to indicate password!");
         }
         int atPosition = input[1].indexOf("/");
         if (input[1].substring(0, atPosition).isEmpty()) {
-            throw new DukeException("There is no username in your login command!");
+            throw new DukeException("Wrong format! Please follow the format login username /password");
         } else if (input[1].substring(atPosition + 1).isEmpty()) {
             throw new DukeException("An login requires a password!");
         } else if (input[1].substring(atPosition + 1).length() != MAX_PASSWORD_LENGTH) {
