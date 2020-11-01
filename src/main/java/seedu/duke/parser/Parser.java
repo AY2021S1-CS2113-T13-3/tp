@@ -178,8 +178,9 @@ public class Parser {
             throw new DukeException("Password needs to be 6-digits long!");
         } else if (!input[1].substring(atPosition + 1).matches("[0-9]+")) {
             throw new DukeException("Password needs to be a 6-digits number!");
+        }  else if (!input[1].substring(0, atPosition - 1).matches("^[a-zA-Z]*$")) {
+            throw new DukeException("Username needs to contain one word with only Alphabets!");
         }
-        
     }
 
     /**
